@@ -14,12 +14,68 @@
     <p>Click the button to display the date.</p>
     <button onclick="displayDate()">The time is?</button>
 
+    <p id="demo"></p>
+
     <script>
       function displayDate() {
         document.getElementById('demo').innerHTML = Date();
       }
+
+      // function parameter  -> 함수 선언할 때
+      // function argument   -> 함수 호출할 때
+      // 1. 전통적인 방식 > 2. Arrow funciton
+      function sayHellowithParameter(name, age) {
+        console.log(age + '살 ' + name + '씨, 안녕하세요~');
+      }
+      sayHellowithParameter('준원', 14);
+
+      // return (반환값)
+      function add(val1, val2) {
+        return val1 + val2;
+      }
+      var k = add(1, 2);
+      console.log(k);
     </script>
 
-    <p id="demo"></p>
+    <!-- <h1>숫자를 입력하세요</h1>
+    <div>
+      <input id="input_num" type="text" />
+      <button id="btn_submit">제출</button>
+      <button id="btn_chgClr">색 바꾸기</button>
+    </div>
+    <h1 id="result"></h1>
+    <script>
+      const w_btn_submit = document.querySelector('#btn_submit');
+      const w_btn_chgClr = document.querySelector('#btn_chgClr');
+      const w_input = document.querySelector('#input_num');
+      const w_h1_result = document.querySelector('#result');
+
+      w_btn_submit.addEventListener('click', () => {
+        console.log('버튼 눌렸음!!!');
+        const temp = parseInt(w_input.value);
+
+        w_h1_result.textContent = temp;
+        if (!temp) {
+          w_h1_result.textContent = '값을 입력하세요!!!';
+        } else {
+          let decision = '홀수';
+          if (temp % 2 == 0) {
+            decision = '짝수';
+          }
+          w_h1_result.textContent = temp + ' 는 ' + decision + '입니다.';
+        }
+        w_input.value = '';
+        w_input.focus();
+      });
+
+      // red > green > blue
+      const clr_array = ['red', 'green', 'blue'];
+      let clr_idx = 0;
+
+      w_btn_chgClr.addEventListener('click', () => {
+        clr_idx = (clr_idx + 1) % clr_array.length;
+        w_h1_result.style.color = clr_array[clr_idx];
+      });
+    </script> -->
   </body>
 </html>

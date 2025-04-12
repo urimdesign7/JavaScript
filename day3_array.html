@@ -17,12 +17,12 @@
 
     <script>
       // 배열
-      const myArray1 = [1, 2, 'apple', 'banana', 3.14, true];
-      for (let i = 0; i < myArray1.length; i++) {
-        console.log(myArray1[i]);
-      }
-      document.getElementById('demo').innerHTML = myArray1;
-      // document.getElementById('demo').innerHTML = myArray1[0];
+      // const myArray1 = [1, 2, 'apple', 'banana', 3.14, true];
+      // for (let i = 0; i < myArray1.length; i++) {
+      //   console.log(myArray1[i]);
+      // }
+      // document.getElementById('demo').innerHTML = myArray1;
+      // document.getElementById('demo').innerHTML = myArray1[2];
 
       // 배열 안에 배열 ( 주석 단축키 : ctl + / )
       // const myArray2 = [1, [3.14, true, 'banana', 10], 'apple'];
@@ -46,26 +46,29 @@
       // document.getElementById('demo3').innerHTML = myArray2;
 
       // 배열의 값 추가 하기 push() 뒤에, unshift 앞에
-      // console.log('before :' + myArray1);
-      // myArray1.push('organge');
-      // console.log('push : ' + value1);
-      // console.log('after : ' + myArray1);
-      // document.getElementById('demo3').innerHTML = myArray1;
+      const myArray1 = [1, 2, 'apple', 'banana', 3.14, true];
+      console.log('before :' + myArray1);
+      const value1 = myArray1.push('organge');
+      console.log('push : ' + value1);
+      console.log('after : ' + myArray1);
+      document.getElementById('demo3').innerHTML = myArray1;
 
-      // console.log('before :' + myArray2);
-      // myArray2.unshift('organge');
-      // console.log('unshift : ' + value2);
-      // console.log('after : ' + myArray2);
-      // document.getElementById('demo4').innerHTML = myArray2;
+      const myArray2 = [1, [3.14, true, 'banana', 10], 'apple'];
+      console.log('before :' + myArray2);
+      const value2 = myArray2.unshift('organge');
+      console.log('unshift : ' + value2);
+      console.log('after : ' + myArray2);
+      document.getElementById('demo4').innerHTML = myArray2;
 
-      // const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
-      // document.getElementById('demo5').innerHTML = fruits;
+      // 배열의 Sort 처리
+      const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+      document.getElementById('demo5').innerHTML = fruits;
 
-      // fruits.sort();
-      // document.getElementById('demo6').innerHTML = fruits;
+      fruits.sort();
+      document.getElementById('demo6').innerHTML = fruits;
 
-      // fruits.reverse();
-      // document.getElementById('demo7').innerHTML = fruits;
+      fruits.reverse();
+      document.getElementById('demo7').innerHTML = fruits;
     </script>
   </body>
 </html>
